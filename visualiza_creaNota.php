@@ -31,6 +31,9 @@ include("funciones.php");
 		<p>Fecha</p>
 		<input class="fecha" name="txtFecha" type="date">
 	
+		<p>Resumen de la Nota</p>
+		<textarea class="resumen" name="txtResumen"> </textarea>
+
 		<p>Cuerpo de la Nota</p>
 		<textarea class="nota" name="txtCuerpo"> </textarea>
 		
@@ -45,7 +48,7 @@ include("funciones.php");
 			{
 				while($datos = mysql_fetch_array($rs))
 				{
-					echo "<option value=".$datos['id_notas'].">".$datos['id_notas']."</option>";						
+					echo "<option value=".$datos['ID'].">".$datos['ID']."</option>";						
 				}
 		  
 				mysql_close();
@@ -57,7 +60,6 @@ include("funciones.php");
 		?>
 	
 		</select>
-		<input type="submit">
 		<br><br>
 		
 		<p>video relacionado</p>
