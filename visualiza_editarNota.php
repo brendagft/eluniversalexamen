@@ -12,7 +12,7 @@ include("funciones.php");
 </head>
 
 <body>
-	<form class="form"  onsubmit="javascript:return;"  action="cargaNota.php" method="post" enctype="multipart/form-data">
+	<form class="form"  onsubmit="javascript:return;"  action="editarNota.php?'<?php $_REQUEST['idN'] ?>'" method="post" enctype="multipart/form-data">
 		<p>Titulo de la nota</p>
 		<input class="titulo" name="txtTitulo" type="text">
 		
@@ -65,10 +65,13 @@ include("funciones.php");
 		<p>video relacionado</p>
 		<input class="url_video" name="txtUrl" type="url">
 		<br><br>
-		<input type="submit">
+		<?php echo "prueba: ". $_REQUEST['idN'] ?>
+		<input type="hidden" name="idN" value="<?php echo $_REQUEST['idN'];?>"/>
+		<input type="submit" value="Modifica Nota"/>
+		
 	</form >
 	
 
 </body>
 
-</html>		
+</html>	
